@@ -19,7 +19,7 @@ def preprocessing():
 
     # Check the distribution of the target variable
     print("\nDistribution of target variable:")
-    print(data['Drug'].value_counts())
+    print(data.Drug.value_counts())
 
     print("\nData types of each column:")
     print(data.describe())

@@ -25,6 +25,15 @@ def eda(data):
     plt.ylabel("Frequency")
     plt.show()
 
+    # Print scatter plots of the features colored by Drug
+    plt.figure(figsize=(10, 6))
+    plt.scatter(data.Age, data.Na_to_K, c=data.Drug, cmap="viridis", edgecolor="k")
+    plt.title("Age vs Na_to_K")
+    plt.xlabel("Age")
+    plt.ylabel("Na_to_K")
+    plt.colorbar(label="Drug")
+    plt.show()
+
     # Print boxplots of the features
     plt.figure(figsize=(10, 6)) 
     plt.subplot(1, 2, 1)
